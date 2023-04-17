@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+html {
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  /* fix for scrollbar popping in and out at certain widths, but adds a permanent scrollbar */
+  overflow-y: scroll;
+}
+
+button.linkButton {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-family: inherit;
+  /*input has OS specific font-family*/
+  color: rgb(175, 175, 175);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footerIcon {
+  color: white;
+  margin-right: 10px;
+}
+
+.toolButton {
+  min-width: 135px;
+  height: 36px;
+}
+
+.smallText {
+  font-size: 12px;
+}
+
+.sectionHeader {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: gray;
+  margin-top: 8px;
+}
+
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.ui.steps .step{
+  background-color: #6f90be66 !important;
+  color: rgb(221, 220, 220) !important;
+}
+
+.ui.steps .step .description{
+  color: rgb(221, 220, 220) !important;
+}
+
+.ui.steps .step:after{
+  display: none;
+}
+
+
+@media screen and (max-width: 620px) {
+  .logo_title{
+    display: none;
+  }
+  .logo_icon{
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -190,8 +190,8 @@ export const iceServers = () => [
   },
   {
     urls: 'turn:numb.viagenie.ca',
-    credential: 'watchparty',
-    username: 'howardzchung@gmail.com',
+    credential: 'colosseum',
+    username: 'ratneshpawar00@gmail.com',
   },
 ];
 

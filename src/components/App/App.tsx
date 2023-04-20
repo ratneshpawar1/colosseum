@@ -657,7 +657,7 @@ export default class App extends React.Component<AppProps, AppState> {
         ((document.visibilityState && document.visibilityState !== 'visible') ||
           this.state.currentTab !== 'chat')
       ) {
-        new Audio('/clearly.mp3').play();
+        new Audio('/notification.mp3').play();
       }
       this.state.chat.push(data);
       this.setState({

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Modal, Button, Icon, Image, Popup } from 'semantic-ui-react';
+import { Modal, Button, Icon, Image } from 'semantic-ui-react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import { serverPath } from '../../utils';
 import axios from 'axios';
-import { ManageSubButton } from '../SubscribeButton/SubscribeButton';
+//import { ManageSubButton } from '../SubscribeButton/SubscribeButton';
 
 export class ProfileModal extends React.Component<{
   close: () => void;
@@ -81,7 +81,7 @@ export class ProfileModal extends React.Component<{
   authDiscord = () => {
     const url = `https://discord.com/api/oauth2/authorize?client_id=1071707916719095908&redirect_uri=${encodeURIComponent(
       process.env.REACT_APP_OAUTH_REDIRECT_HOSTNAME ??
-        'https://www.watchparty.me'
+        'https://www.colosseum.com'
     )}%2Fdiscord%2Fauth&response_type=token&scope=identify`;
     window.open(
       url,
@@ -144,7 +144,7 @@ export class ProfileModal extends React.Component<{
           </Modal.Actions>
         </Modal>
         <Modal.Header>
-         <Image avatar src={userImage} />
+          <Image avatar src={userImage} />
           {this.props.user.email}
           {this.props.user.emailVerified && (
             <Icon
@@ -164,65 +164,6 @@ export class ProfileModal extends React.Component<{
               gap: '10px',
             }}
           >
-            <Button
-              icon
-              labelPosition="left"
-              fluid
-              href="https://gravatar.com"
-              target="_blank"
-              color="blue"
-            >
-              <Icon name="image" />
-              Edit Gravatar
-            </Button>
-            <Button
-              disabled={
-                this.props.user.emailVerified || this.state.verifyDisabled
-              }
-              icon
-              labelPosition="left"
-              fluid
-              color="purple"
-              onClick={this.verifyEmail}
-            >
-              <Icon name="check circle" />
-              Verify Email
-            </Button>
-            {this.props.isSubscriber && (
-              <ManageSubButton user={this.props.user} />
-            )}
-            {this.state.linkedDiscord ? (
-              <Button
-                icon
-                labelPosition="left"
-                fluid
-                color="red"
-                animated="fade"
-                onClick={this.deleteDiscord}
-              >
-                <Icon name="discord" />
-                Unlink Discord {this.state.linkedDiscord.accountname}#
-                {this.state.linkedDiscord.discriminator}
-              </Button>
-            ) : (
-              <React.Fragment>
-                <Popup
-                  content="Link your Discord account to automatically receive your Subscriber role if you're subscribed"
-                  trigger={
-                    <Button
-                      icon
-                      labelPosition="left"
-                      fluid
-                      color="orange"
-                      onClick={this.authDiscord}
-                    >
-                      <Icon name="discord" />
-                      Link Discord Account
-                    </Button>
-                  }
-                />
-              </React.Fragment>
-            )}
             <Button
               disabled={this.state.resetDisabled}
               icon

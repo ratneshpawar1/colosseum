@@ -9,20 +9,19 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
   return (
     <div>
       <div className={styles.container}>
-
-        <div className={styles.glassmorphism} >
+        <div className={styles.glassmorphism}>
           <span />
         </div>
 
         <Hero
-          heroText={'Watch videos together with friends anywhere.'}
-          subText={'No registration or download required.'}
+          heroText={'Watch videos with friends anytime.'}
+          subText={'Just hit New room button and get started'}
           action={
             <div style={{ marginTop: '8px', width: '300px' }}>
               <NewRoomButton size="huge" user={user} />
             </div>
           }
-          image={'/screenshot4.png'}
+          image={'/first.jpeg'}
         />
         <Divider horizontal>
           <Header inverted as="h4">
@@ -33,35 +32,31 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
         <div className={styles.featureSection}>
           <Feature
             icon="sync"
-            title="Synchronized Play"
-            text="Starts, stops, and seeks are synchronized to everyone, so take those restroom and snack breaks without worrying about falling behind."
+            title="Video Synchronization"
+            text="Take breaks for snacks without falling behind"
           />
           <Feature
             icon="conversation"
             title="Chat"
-            text="Chat with others in your room. Memes and inside jokes encouraged."
+            text="Chat with you friends,react to moments together"
           />
-          <Feature
-            icon="list"
-            title="Playlists"
-            text="Set up a whole list of videos to play next, and rearrange to your heart's content."
-          />
+
           <Feature
             icon="video"
             title="Video chat"
-            text="Jump into video chat if you'd rather be face-to-face."
+            text="Get on a video call, to make it a virtual date."
           />
         </div>
         <Hero
-          heroText={'React to moments together.'}
-          subText={"Find moments of shared joy even when you're apart."}
-          image={'/screenshot18.png'}
+          heroText={'Laugh together'}
+          subText={'Enjoy content with your friends even when apart'}
+          image={'/second.jpeg'}
           color="green"
         />
         <Divider horizontal>
           <Header inverted as="h4">
             <Icon name="film" />
-            Watch anything together
+            Highlights Of Colosseum
           </Header>
         </Divider>
         <div className={styles.featureSection}>
@@ -73,12 +68,12 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
           <Feature
             icon="youtube"
             title={`YouTube`}
-            text="Watch videos together from YouTube."
+            text="Watch any videos from YouTube in real time."
           />
           <Feature
             icon="slideshare"
             title={`Screensharing`}
-            text="Share a browser tab or your desktop."
+            text="Share a tab or desktop."
           />
           {/* <Feature
             icon="file"
@@ -88,16 +83,10 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
           <Feature
             icon="linkify"
             title={`URL`}
-            text="Paste in a video URL for everyone to watch from."
+            text="Want to watch something from web? Just Paste the link and enjoy."
           />
         </div>
-        <Hero
-          heroText={'Theater mode.'}
-          subText={
-            'Bring video and chat front-and-center for minimal distractions.'
-          }
-          image={'/screenshot14.png'}
-        />
+
         <Divider horizontal />
         <div
           style={{
@@ -114,7 +103,7 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
                 <Icon name="certificate" />
                 <Step.Content>
                   <Step.Title>1.</Step.Title>
-                  <Step.Description>Make a room</Step.Description>
+                  <Step.Description>click on new room</Step.Description>
                 </Step.Content>
               </Step>
 
@@ -122,7 +111,9 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
                 <Icon name="group" />
                 <Step.Content>
                   <Step.Title>2.</Step.Title>
-                  <Step.Description>Share link with friends</Step.Description>
+                  <Step.Description>
+                    Share the link with friends
+                  </Step.Description>
                 </Step.Content>
               </Step>
 
@@ -130,7 +121,7 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
                 <Icon name="film" />
                 <Step.Content>
                   <Step.Title>3.</Step.Title>
-                  <Step.Description>Pick something to watch</Step.Description>
+                  <Step.Description>Select content to watch.</Step.Description>
                 </Step.Content>
               </Step>
 
@@ -138,7 +129,7 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
                 <Icon name="thumbs up outline" />
                 <Step.Content>
                   <Step.Title>4.</Step.Title>
-                  <Step.Description>Success!</Step.Description>
+                  <Step.Description>Enjoy the Watch Party.</Step.Description>
                 </Step.Content>
               </Step>
             </Step.Group>
@@ -173,7 +164,7 @@ const Feature = ({
         minWidth: '180px',
       }}
     >
-      <Icon fitted size="huge" name={icon as any} style={{ opacity : "0.6" }} />
+      <Icon fitted size="huge" name={icon as any} style={{ opacity: '0.6' }} />
       <h4 className={styles.featureTitle}>{title}</h4>
       <div className={styles.featureText}>{text}</div>
     </div>
@@ -211,7 +202,7 @@ export const Hero = ({
         >
           <img
             alt="hero"
-            style={{ width: '100%', borderRadius: '25px', opacity : '0.8' }}
+            style={{ width: '100%', borderRadius: '25px', opacity: '0.8' }}
             src={image}
           />
         </div>

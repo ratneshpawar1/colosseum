@@ -3,8 +3,8 @@
 apt update
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y certbot python3-certbot-dns-cloudflare
-certbot certonly --standalone -n --email howardzchung@gmail.com --agree-tos -d $(hostname).watchparty.me
-#certbot certonly --dns-cloudflare --dns-cloudflare-credentials ~/cloudflare.ini -d *.watchparty.me --preferred-challenges dns-01
+certbot certonly --standalone -n --email howardzchung@gmail.com --agree-tos -d $(hostname).colosseum.com
+#certbot certonly --dns-cloudflare --dns-cloudflare-credentials ~/cloudflare.ini -d *.colosseum.com --preferred-challenges dns-01
 
 apt install -y nginx
 apt install -y bind9
@@ -13,9 +13,9 @@ echo 'events {}
 http {
   server {
     listen 443 ssl;
-    server_name HOSTNAME_PLACEHOLDER.watchparty.me;
-    ssl_certificate /etc/letsencrypt/live/HOSTNAME_PLACEHOLDER.watchparty.me/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/HOSTNAME_PLACEHOLDER.watchparty.me/privkey.pem;
+    server_name HOSTNAME_PLACEHOLDER.colosseum.com;
+    ssl_certificate /etc/letsencrypt/live/HOSTNAME_PLACEHOLDER.colosseum.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/HOSTNAME_PLACEHOLDER.colosseum.com/privkey.pem;
 
     location / {
         resolver 127.0.0.1;

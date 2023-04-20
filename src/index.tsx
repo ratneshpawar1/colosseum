@@ -6,7 +6,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import App from './components/App';
 import { Home } from './components/Home';
-import { Privacy, Terms, FAQ} from './components/Pages/Pages';
+//import { Privacy, Terms, FAQ} from './components/Pages/Pages';
 import { TopBar } from './components/TopBar/TopBar';
 import { Footer } from './components/Footer/Footer';
 import * as serviceWorker from './serviceWorker';
@@ -119,42 +119,7 @@ class WatchParty extends React.Component {
             );
           }}
         />
-        <Route path="/terms">
-          <TopBar
-            user={this.state.user}
-            isSubscriber={this.state.isSubscriber}
-            isCustomer={this.state.isCustomer}
-          />
-          <Terms />
-          <Footer />
-        </Route>
-        <Route path="/privacy">
-          <TopBar
-            user={this.state.user}
-            isSubscriber={this.state.isSubscriber}
-            isCustomer={this.state.isCustomer}
-          />
-          <Privacy />
-          <Footer />
-        </Route>
-        <Route path="/faq">
-          <TopBar
-            user={this.state.user}
-            isSubscriber={this.state.isSubscriber}
-            isCustomer={this.state.isCustomer}
-          />
-          <FAQ />
-          <Footer />
-        </Route>
-        <Route path="/discordBot">
-          <TopBar
-            user={this.state.user}
-            isSubscriber={this.state.isSubscriber}
-            isCustomer={this.state.isCustomer}
-          />
-          <Footer />
-        </Route>
-       <Route path="/discord/auth" exact>
+        <Route path="/discord/auth" exact>
           <Discord user={this.state.user} />
         </Route>
         <Route path="/debug">

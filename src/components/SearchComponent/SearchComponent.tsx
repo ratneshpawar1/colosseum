@@ -27,7 +27,7 @@ export class SearchComponent extends React.Component<SearchComponentProps> {
 
   doSearch = async (e: any) => {
     e.persist();
-    this.setState({ inputMedia: e.target.value }, () => {
+    this.setState({ inputMedia: e?.target?.value ?? '' }, () => {
       if (!this.debounced) {
         this.debounced = debounce(async () => {
           this.setState({ loading: true });
@@ -82,9 +82,10 @@ export class SearchComponent extends React.Component<SearchComponentProps> {
           className="icon"
           labeled
           disabled={this.props.disabled}
-          search={(() => {}) as any}
+          search={true}
           text={placeholder}
           onSearchChange={this.doSearch}
+          onFocus={this.doSearch}
           scrolling
           // onBlur={() => this.setState({ results: this.state.watchOptions })}
           //searchQuery={this.state.query}

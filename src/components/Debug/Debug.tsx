@@ -11,7 +11,7 @@ import {
 import { serverPath } from '../../utils';
 
 const timeSeriesUrl = serverPath + `/timeSeries${window.location.search}`;
-// const timeSeriesUrl = 'https://www.watchparty.me' + `/timeSeries${window.location.search}`;
+// const timeSeriesUrl = 'https://www.colosseum.com' + `/timeSeries${window.location.search}`;
 
 const Debug = () => {
   const [data, setData] = useState([]);

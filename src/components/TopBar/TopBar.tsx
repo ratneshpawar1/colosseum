@@ -1,5 +1,5 @@
 import React from 'react';
-import { serverPath, colorMappings, getUserImage } from '../../utils';
+import { serverPath, getUserImage } from '../../utils';
 import {
   Icon,
   Popup,
@@ -12,7 +12,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import { LoginModal } from '../Modal/LoginModal';
 import axios from 'axios';
-import { SubscribeButton } from '../SubscribeButton/SubscribeButton';
+//import { SubscribeButton } from '../SubscribeButton/SubscribeButton';
 import { ProfileModal } from '../Modal/ProfileModal';
 import Announce from '../Announce/Announce';
 import { InviteButton } from '../InviteButton/InviteButton';
@@ -213,7 +213,7 @@ export class ListRoomsButton extends React.Component<{
   render() {
     return (
       <Dropdown
-        style={{ height: '36px', borderRadius : "100px" }}
+        style={{ height: '36px', borderRadius: '100px' }}
         icon="group"
         labeled
         className="icon"
@@ -276,9 +276,7 @@ export class TopBar extends React.Component<{
   showInviteButton?: boolean;
 }> {
   render() {
-    const subscribeButton = !this.props.isSubscriber ? (
-      <></>
-    ) : null;
+    const subscribeButton = !this.props.isSubscriber ? <></> : null;
 
     return (
       <React.Fragment>
@@ -288,51 +286,13 @@ export class TopBar extends React.Component<{
             flexWrap: 'wrap',
             paddingBottom: '0px',
             rowGap: '8px',
-            maxWidth : "1280px",
+            maxWidth: '1500px',
             margin: '0 auto',
-            padding : "1em 30px",
-            zIndex : 100000,
-            position : "relative"
+            padding: '1em 30px',
+            zIndex: 100000,
+            position: 'relative',
           }}
         >
-          <a href="/" style={{ display: 'flex' }}>
-            <div
-              style={{
-                height: '48px',
-                width: '48px',
-                marginRight: '5px',
-                borderRadius: '50%',
-                position: 'relative',
-                backgroundColor: '#ffa500',
-              }}
-              className='logo_icon'
-            >
-              <Icon
-                inverted
-                name="film"
-                size="large"
-                style={{
-                  position: 'absolute',
-                  top: 8,
-                  width: '100%',
-                  margin: '0 auto',
-                }}
-              />
-              {/* <Icon
-                inverted
-                name="group"
-                size="large"
-                color="green"
-                style={{
-                  position: 'absolute',
-                  bottom: 8,
-                  width: '100%',
-                  margin: '0 auto',
-                }}
-              /> */}
-            </div>
-          </a>
-          
           {this.props.roomTitle || this.props.roomDescription ? (
             <div
               style={{
@@ -374,7 +334,7 @@ export class TopBar extends React.Component<{
                       fontSize: '30px',
                       lineHeight: '30px',
                     }}
-                    className='logo_title'
+                    className="logo_title"
                   >
                     Colosseum
                   </div>

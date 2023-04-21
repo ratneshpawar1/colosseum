@@ -81,6 +81,7 @@ export class LoginModal extends React.Component<{
                   type="button"
                   className="linkButton"
                   onClick={() => this.setState({ isCreateMode: true })}
+                  style={{ color: 'green' }}
                 >
                   Create one.
                 </button>{' '}
@@ -89,6 +90,7 @@ export class LoginModal extends React.Component<{
                   type="button"
                   className="linkButton"
                   onClick={this.resetPassword}
+                  style={{ color: 'red' }}
                 >
                   reset it.
                 </button>

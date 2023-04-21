@@ -15,7 +15,7 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
 
         <Hero
           heroText={'Watch videos with friends anytime.'}
-          subText={'Just hit New room button and get started'}
+          subText={'Just hit Create room button and get started'}
           action={
             <div style={{ marginTop: '8px', width: '300px' }}>
               <NewRoomButton size="huge" user={user} />

@@ -1,5 +1,5 @@
 export const examples: SearchResult[] = [
-  'https://upload.wikimedia.org/wikipedia/commons/7/7a/Charge_-_Blender_Open_Movie-full_movie.webm',
+  'https://upload.wikimedia.org/wikipedia/commons/0/03/The_Dover_Boys_at_Pimento_University_1080p.webm',
 ].map((url) => {
   if (typeof url === 'object') {
     return url;

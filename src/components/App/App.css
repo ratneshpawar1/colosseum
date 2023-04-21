@@ -101,10 +101,6 @@ body {
   display: none !important;
 }
 
-#leftYt {
-  /*pointer-events: none;*/
-}
-
 @media only screen and (max-width: 600px) {
   /* .mobileStack {
     flex-direction: column;

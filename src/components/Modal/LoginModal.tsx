@@ -109,6 +109,7 @@ export class LoginModal extends React.Component<{
                 onClick={() =>
                   this.emailSignIn(this.state.email, this.state.password)
                 }
+                circular
               >
                 Login
               </Button>

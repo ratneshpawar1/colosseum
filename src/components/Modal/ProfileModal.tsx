@@ -169,8 +169,9 @@ export class ProfileModal extends React.Component<{
               icon
               labelPosition="left"
               fluid
-              color="green"
+              color="yellow"
               onClick={this.resetPassword}
+              circular
             >
               <Icon name="key" />
               Reset Password
@@ -181,11 +182,18 @@ export class ProfileModal extends React.Component<{
               fluid
               color="red"
               onClick={this.deleteAccountConfirm}
+              circular
             >
               <Icon name="trash" />
               Delete Account
             </Button>
-            <Button icon labelPosition="left" onClick={this.onSignOut} fluid>
+            <Button
+              icon
+              labelPosition="left"
+              onClick={this.onSignOut}
+              fluid
+              circular
+            >
               <Icon name="sign out" />
               Sign out
             </Button>

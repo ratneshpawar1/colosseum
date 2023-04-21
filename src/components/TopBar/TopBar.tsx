@@ -58,17 +58,16 @@ export class NewRoomButton extends React.Component<{
         content="Create a new room with a random URL that you can share with friends"
         trigger={
           <Button
-            color="green"
+            color="yellow"
             size={this.props.size}
             icon
-            labelPosition="left"
             onClick={this.createRoom}
             className={this.props.size ? '' : 'toolButton'}
             style={{ borderRadius: '90px' }}
             fluid
           >
             <Icon name="certificate" />
-            New Room
+            Create Room
           </Button>
         }
       />
@@ -142,10 +141,15 @@ export class SignInButton extends React.Component<SignInButtonProps> {
         )}
         <Popup
           basic
-          content="Sign in to set your name and picture, subscribe, or launch VBrowsers"
+          content="Sign in to set your name and picture."
           trigger={
             <Dropdown
-              style={{ height: '40px', borderRadius: '100px' }}
+              style={{
+                height: '40px',
+                borderRadius: '100px',
+                backgroundColor: '#F5F5DC',
+                color: 'black',
+              }}
               icon="sign in"
               labeled
               className="icon"

@@ -251,18 +251,18 @@ export class VideoChat extends React.Component<VideoChatProps> {
               marginTop: '8px',
             }}
           >
-            <Button
+            {/*<Button
               fluid
-              title="Join Video Chat"
-              color={'purple'}
+              title="Video Chat"
+              color={'blue'}
               size="medium"
               icon
               labelPosition="left"
               onClick={this.setupWebRTC}
             >
               <Icon name="video" />
-              {`Join Video Chat`}
-            </Button>
+              {`Webcam jam`}
+            </Button>*/}
           </div>
         )}
         {ourStream && (

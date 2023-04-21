@@ -1380,7 +1380,7 @@ export default class App extends React.Component<AppProps, AppState> {
           <Input
             inverted
             fluid
-            label={'My name is:'}
+            label={'Nickname:'}
             value={this.state.myName}
             onChange={this.updateName}
             style={{ visibility: displayRightContent ? '' : 'hidden' }}
@@ -1524,9 +1524,10 @@ export default class App extends React.Component<AppProps, AppState> {
                 }}
                 icon
                 labelPosition="left"
+                circular
               >
                 <Icon name="volume up" />
-                Click to unmute
+                Unmute
               </Button>
             </div>
           </Modal>
@@ -1680,7 +1681,7 @@ export default class App extends React.Component<AppProps, AppState> {
                             Stop Share
                           </Button>
                         )}
-                        {!this.screenShareStream &&
+                        {/*!this.screenShareStream &&
                           !sharer &&
                           !this.isVBrowser() && (
                             <Popup
@@ -1704,7 +1705,7 @@ export default class App extends React.Component<AppProps, AppState> {
                                 </Button>
                               }
                             />
-                          )}
+                            )*/}
                         {/* {!this.screenShareStream &&
                           !sharer &&
                           !this.isVBrowser() && (
@@ -1880,10 +1881,9 @@ export default class App extends React.Component<AppProps, AppState> {
                           )}
                           {!this.state.loading && !this.state.currentMedia && (
                             <Message
-                              color="yellow"
+                              color="red"
                               icon="hand point up"
-                              header="You're not watching anything!"
-                              content="Pick something to watch above."
+                              header="Search for content from above"
                             />
                           )}
                           {!this.state.loading &&

@@ -205,12 +205,12 @@ export class ComboBox extends React.Component<ComboBoxProps> {
             />
           </Form>
           <Dropdown
-            icon="list"
+          /*icon="list"
             labeled
             className="icon"
             button
             text={`Playlist (${this.props.playlist.length})`}
-            scrolling
+            scrolling*/
           >
             <Dropdown.Menu direction="left">
               {this.props.playlist.length === 0 && (

@@ -70,11 +70,11 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
             title={`YouTube`}
             text="Watch any videos from YouTube in real time."
           />
-          <Feature
+          {/*<Feature
             icon="slideshare"
             title={`Screensharing`}
             text="Share a tab or desktop."
-          />
+          />*/}
           {/* <Feature
             icon="file"
             title={`File`}
@@ -96,7 +96,7 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
             alignItems: 'center',
           }}
         >
-          <div className={styles.heroText}>Get started!</div>
+          <div className={styles.heroText}>How to start?</div>
           <div className={styles.featureSection}>
             <Step.Group style={{ margin: '8px' }}>
               <Step>
@@ -135,7 +135,7 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
             </Step.Group>
           </div>
 
-          <div style={{ width: '160px' }}>
+          <div style={{ width: '200px' }}>
             <NewRoomButton user={user} />
           </div>
         </div>
